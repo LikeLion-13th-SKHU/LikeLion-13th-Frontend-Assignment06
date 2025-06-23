@@ -1,0 +1,112 @@
+.appnav {
+  display: flex;
+  justify-content: center; /* 중앙 정렬 */
+  gap: 24px; /* 링크 사이 간격 */
+  margin: 32px 0;
+  padding-top: 40px;
+}
+
+.center-outer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10rem;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.center-inner {
+  background-color: #bde4fa;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 480px;
+}
+
+.center-inner h2 {
+  text-align: center;
+  font-size: 20px;
+  color: #2b61d1;
+  margin-bottom: 24px;
+  margin-top: 0px;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.todo {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* 내부 텍스트 */
+.todo div {
+  margin-bottom: 4px;
+}
+
+/* 전체 높이 중앙 정렬을 위해 필요 */
+.full-height {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh; /* 전체 화면 중앙 정렬 */
+}
+
+.light-card {
+  background-color: #f8fafc;
+}
+
+.form-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.todo-form label {
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.todo-form input,
+.todo-form textarea {
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  background-color: white;
+}
+
+.todo-form textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.todo-form button {
+  background-color: #2563eb;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.todo-form button:hover {
+  background-color: #1e40af;
+}
