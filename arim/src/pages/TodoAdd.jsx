@@ -16,7 +16,7 @@ function TodoAdd() {
       .post(`${import.meta.env.VITE_API_URL}/c/e7ad-247e-46cf-b3d5`, form)
       .then((res) => {
         console.log('과제 등록 성공!');
-        console.dir(res.data, { depth: null }); // 👈 이렇게 하면 트리 구조로 자세히 출력됩니다.
+        console.dir(res.data, { depth: null });
       });
   };
 
