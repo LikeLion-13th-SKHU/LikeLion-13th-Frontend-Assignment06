@@ -1,17 +1,16 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import './Todo.css';
 
 function Todo() {
     const [todos, setTodos] = useState([]);
+    const GET_URL = import.meta.env.VITE_GET_URL;
 
     useEffect(() => {
-        const GET = import.meta.env.VITE_GET_URL;
-
-        fetch(GET)
-            .then((response) => response.json())
-            .then((data) => { setTodos(data.records); })
-            .catch((error) => console.error('불러오는데 실패하였습니다:', error));
+        axios.get(GET_URL)
+          .then((response) => {setTodos(response.data.records);})
+          .catch((error) => console.error('불러오는데 실패하였습니다:', error));
     }, []);
 
     return (

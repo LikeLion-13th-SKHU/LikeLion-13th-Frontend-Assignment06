@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import axios from 'axios';
 import './TodoReg.css';
 
 function TodoReg() {
@@ -14,20 +15,12 @@ function TodoReg() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch(POST_URL, {
-            method: "POST",
-            headers: { "Content-Type" : "application/json"},
-            body: JSON.stringify({...form}),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            console.log("등록 완료", data);
-            alert('등록 완료');
-            navigate('/');
+        axios.post(POST_URL, form)
+          .then((response) => {
+            console.log("등록 완료", response.data);
           })
           .catch((error) => {
-            console.error('등록 실패:', error);
-            alert("등록 실패");
+            console.error("등록 실패", error);
           });
     };
 
